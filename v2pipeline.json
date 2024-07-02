@@ -13,7 +13,6 @@
       "pipelineName": "newunifproduct_main",
       "pipelineDescription": "New Pipeline for the product table, that uses staging nlp_product",
       "outputDataModelName": "mdmproduct",
-      "timeZone": "America/Adak",
       "checkExistsDataToProcess": true,
       "overlapDeltaMinutes": 300,
       "fanOut": true,
@@ -26,6 +25,11 @@
           "customer": true,
           "unified": true
         },
+        "subscriptions": {
+          "customer": true,
+          "unified": true
+        }
+      },
       "clear": {
         "realtime": true,
         "bigquery": {
@@ -62,8 +66,7 @@
       "outputDataModelName": "mdmpurchaseorder",
       "overlapDeltaMinutes": 300,
       "checkExistsDataToProcess": true,
-      "timeZone": "America/Grenada",
-      "useBatchNotification": false,
+      "useBatchNotification": true,
       "tempTableRetentionPeriodDays": 10,
       "sendTo": {
         "realtime": true,
@@ -110,32 +113,10 @@
       "pipelineDescription": "Far Horizon Data Model, that uses staging nlp_product",
       "outputDataModelName": "mdmfarhorizon",
       "overlapDeltaMinutes": 300,
-      "fanOut": true,
+      "fanOut": false,
       "checkExistsDataToProcess": true,
-      "useBatchNotification": false,
+      "useBatchNotification": true,
       "tempTableRetentionPeriodDays": 9,
-      "sendTo": {
-        "realtime": false,
-        "bigquery": {
-          "customer": true,
-          "unified": false
-        },
-        "subscriptions": {
-          "customer": false,
-          "unified": false
-        }
-      },
-      "clear": {
-        "realtime": false,
-        "bigquery": {
-          "customer": true,
-          "unified": false
-        },
-        "subscriptions": {
-          "customer": false,
-          "unified": false
-        }
-      },
       "cronExpressions": [
         "0 0/3 * ? * MON-FRI *",
         "0 0/2 * ? * SAT,SUN *"
@@ -165,10 +146,9 @@
       "outputDataModelName": "mdmpurchaseproducts",
       "overlapDeltaMinutes": 300,
       "checkExistsDataToProcess": true,
-      "fanOut": true,
       "useBatchNotification": false,
       "sendTo": {
-        "realtime": true,
+        "realtime": false,
         "bigquery": {
           "customer": false,
           "unified": false
@@ -181,12 +161,12 @@
       "clear": {
         "realtime": false,
         "bigquery": {
-          "customer": true,
-          "unified": true
+          "customer": false,
+          "unified": false
         },
         "subscriptions": {
           "customer": false,
-          "unified": true
+          "unified": false
         }
       },
       "cronExpressions": [
