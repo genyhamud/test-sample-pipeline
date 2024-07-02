@@ -26,11 +26,6 @@
           "customer": true,
           "unified": true
         },
-        "subscriptions": {
-          "customer": true,
-          "unified": false
-        }
-      },
       "clear": {
         "realtime": true,
         "bigquery": {
