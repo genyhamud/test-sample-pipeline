@@ -117,6 +117,28 @@
       "checkExistsDataToProcess": true,
       "useBatchNotification": true,
       "tempTableRetentionPeriodDays": 9,
+      "sendTo": {
+        "realtime": false,
+        "bigquery": {
+          "customer": false,
+          "unified": true
+        },
+        "subscriptions": {
+          "customer": false,
+          "unified": true
+        }
+      },
+      "clear": {
+        "realtime": false,
+        "bigquery": {
+          "customer": false,
+          "unified": true
+        },
+        "subscriptions": {
+          "customer": false,
+          "unified": false
+        }
+      },
       "cronExpressions": [
         "0 0/3 * ? * MON-FRI *",
         "0 0/2 * ? * SAT,SUN *"
