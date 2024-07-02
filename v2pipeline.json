@@ -26,34 +26,35 @@
           "customer": true,
           "unified": true
         },
-      "clear": {
-        "realtime": true,
-        "bigquery": {
-          "customer": true,
-          "unified": true
+        "clear": {
+          "realtime": true,
+          "bigquery": {
+            "customer": true,
+            "unified": true
+          },
+          "subscriptions": {
+            "customer": true,
+            "unified": true
+          }
         },
-        "subscriptions": {
-          "customer": true,
-          "unified": true
-        }
-      },
-      "cronExpressions": [
-        "0 0/3 * ? * MON-FRI *",
-        "0 0/2 * ? * SAT,SUN *"
-      ],
-      "processScript": "audproduct.csql",
-      "sourceEntities": {
-        "dataModels": [
-          {
-            "dataModelName": "mdmproduct"
-          }
+        "cronExpressions": [
+          "0 0/3 * ? * MON-FRI *",
+          "0 0/2 * ? * SAT,SUN *"
         ],
-        "stagings": [
-          {
-            "connectorName": "nlp",
-            "stagingName": "product"
-          }
-        ]
+        "processScript": "audproduct.csql",
+        "sourceEntities": {
+          "dataModels": [
+            {
+              "dataModelName": "mdmproduct"
+            }
+          ],
+          "stagings": [
+            {
+              "connectorName": "nlp",
+              "stagingName": "product"
+            }
+          ]
+        }
       }
     },
     {
