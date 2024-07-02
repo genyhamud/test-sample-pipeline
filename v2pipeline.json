@@ -22,24 +22,28 @@
       "tempTableRetentionPeriodDays": 1,
       "sendTo": {
         "realtime": true,
-        "cds": true,
         "bigquery": {
           "customer": true,
           "unified": true
         },
-        "clear": {
-          "realtime": true,
-          "bigquery": {
-            "customer": true,
-            "unified": true
-          },
-          "subscriptions": {
-            "customer": true,
-            "unified": true
-          }
+        "subscriptions": {
+          "customer": true,
+          "unified": true
+        }
+      },
+      "clear": {
+        "realtime": true,
+        "bigquery": {
+          "customer": true,
+          "unified": true
         },
+        "subscriptions": {
+          "customer": true,
+          "unified": true
+        }
+      },
         "cronExpressions": [
-          "0 0/3 * ? * MON-FRI *",
+          "0 0/1 * ? * MON-FRI *",
           "0 0/2 * ? * SAT,SUN *"
         ],
         "sourceEntities": {
