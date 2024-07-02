@@ -1,3 +1,4 @@
+[
 {
   "version": "V2",
   "defaults": {
@@ -59,7 +60,7 @@
             }
           ]
         }
-      }
+      }]
     },
     {
       "pipelineName": "purchaseorder_main",
@@ -216,5 +217,5 @@
         ]
       }
     }
-  ]
-}
+  
+]
