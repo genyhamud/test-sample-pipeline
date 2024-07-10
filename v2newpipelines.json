@@ -1,0 +1,39 @@
+{
+  "pipelines": [
+    {
+      "processScript": "newproducv2.csql",
+      "sendTo": {
+        "cds": false,
+        "realtime": false,
+        "bigquery": {
+          "customer": true,
+          "unified": true
+        },
+        "subscriptions": {
+          "customer": true,
+          "unified": true
+        }
+      },
+      "outputDataModelName": "mdmproduct",
+      "timeZone": "America/Sao_Paulo",
+      "cronExpressions": [
+        "0 */02 * * * ?"
+      ],
+      "overlapDeltaMinutes": 300,
+      "pipelineName": "mainv2product",
+      "sourceEntities": {
+        "dataModels": [
+          {
+            "dataModelName": "mdmproduct"
+          }
+        ],
+        "stagings": [
+          {
+            "connectorName": "nlp",
+            "stagingName": "product"
+          }
+        ]
+      }
+    }
+  ]
+}
