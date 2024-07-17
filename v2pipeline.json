@@ -67,6 +67,7 @@
       "overlapDeltaMinutes": 300,
       "checkExistsDataToProcess": true,
       "useBatchNotification": true,
+      "fanOut": true,
       "tempTableRetentionPeriodDays": 10,
       "sendTo": {
         "realtime": true,
