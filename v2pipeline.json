@@ -63,16 +63,16 @@
       "overlapDeltaMinutes": 300,
       "checkExistsDataToProcess": true,
       "useBatchNotification": true,
-      "fanOut": true,
+      "fanOut": false,
       "tempTableRetentionPeriodDays": 10,
       "sendTo": {
         "realtime": true,
         "bigquery": {
-          "customer": false,
+          "customer": true,
           "unified": true
         },
         "subscriptions": {
-          "customer": false,
+          "customer": true,
           "unified": true
         }
       },
@@ -157,6 +157,7 @@
       "outputDataModelName": "mdmpurchaseproducts",
       "overlapDeltaMinutes": 300,
       "checkExistsDataToProcess": true,
+      "fanOut": true,
       "useBatchNotification": false,
       "sendTo": {
         "realtime": false,
