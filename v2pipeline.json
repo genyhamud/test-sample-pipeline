@@ -166,8 +166,8 @@
           "unified": true
         },
         "subscriptions": {
-          "customer": false,
-          "unified": false
+          "customer": true,
+          "unified": true
         }
       },
       "clear": {
