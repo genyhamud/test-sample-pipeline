@@ -156,7 +156,7 @@
       "pipelineDescription": "Pipeline to list purchase order table, that uses staging nlp_product with jOIN",
       "outputDataModelName": "mdmpurchaseproducts",
       "overlapDeltaMinutes": 300,
-      "checkExistsDataToProcess": true,
+      "checkExistsDataToProcess": false,
       "fanOut": true,
       "useBatchNotification": true,
       "sendTo": {
