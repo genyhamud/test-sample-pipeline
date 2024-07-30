@@ -162,8 +162,8 @@
       "sendTo": {
         "realtime": false,
         "bigquery": {
-          "customer": false,
-          "unified": false
+          "customer": true,
+          "unified": true
         },
         "subscriptions": {
           "customer": false,
