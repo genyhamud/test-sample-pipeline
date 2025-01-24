@@ -376,7 +376,7 @@
         },
         {
             "pipelineName": "v2new_user_main",
-            "processScript": "newuser.csql",
+            "processScript": "user.csql",
             "fanOut": true,
             "checkExistsDataToProcess": true,
             "useBatchNotification": false,
